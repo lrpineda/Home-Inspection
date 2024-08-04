@@ -136,7 +136,7 @@
           {{#each services as |service|}}
           <label class="list-group-item d-flex gap-2">
             <input id="{{service.id}}"class="service form-check-input flex-shrink-0" type="checkbox" value="" />
-            <span id="{{service.name}}"> {{service.name}}
+            <span id="{{service.id}}"> {{service.name}}
               <small id="{{service.description }}" class="d-block text-muted">{{service.description }}</small>
               <small id="service-desc" class="d-block text-muted">${{service.price }}</small>
             </span>

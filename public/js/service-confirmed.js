@@ -14,12 +14,26 @@ const createServiceItem = (service) => {
     return serviceItem;
 };
 
-$(document).on('click', '.service', function(e) {
-    if(e.target.checked) {
+// $(document).on('click', '.service', function(e) {
+//     if(e.target.checked) {
         
-        console.log($(this).parent().find('span').attr('id'));
-    } else{
-        console.log('unchecked');
-    }
+//         console.log($(this).parent().find('span').attr('id'));
+//     } else{
+//         console.log('unchecked');
+//     }
     
+// });
+
+$('form').submit(function(e) {
+    e.preventDefault();
+
+    let services = [];
+
+    $('input[type=checkbox]').each(function() {
+        if(this.checked) {
+            services.push($(this).parent().find('span').attr('id'));
+        }
+    });
+
+    console.log(services);
 });
